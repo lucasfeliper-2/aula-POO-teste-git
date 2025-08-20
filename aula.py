@@ -126,13 +126,22 @@ class Veiculo():
   def ligar(self):
     self.ligado = True
     print('Ligado')
-
   # metodo para desligar o veiculo "novo"
   def desligar(self):
-    self.ligado = False
-    print('Desligado')
     #incluir uma condição para verificar se o veículo está ligado antes de desligar
-    
+    if self.desligar and self.velocidade == 0:
+      self.desligar = False
+      print('Veículo desligado')
+    elif self.desligar and self.velocidade > 0:
+      print('Não é possível desligar o veículo enquanto ele está em movimento. Pare o veículo primeiro.')
+    else:
+      print('O veículo já está desligado')
+  # método antigo para desligar o veículo
+    '''if self.ligado:
+      self.ligado = False
+      print('Veículo desligado')
+    else:
+      print('O veículo já está desligado')'''
   
   def aumentaAno(self, sobeAno): 
     self.ano += sobeAno
@@ -163,21 +172,21 @@ v3 = Veiculo('Ford', 4, 'Preto', 2010, 0, 60, 'Diesel')
 
 # Testando os atributos e métodos
 
-print(v1.marca, v1.rodas, v1.cor, v1.ano, v1.ligado, v1.velocidade, v1.tipo_combustivel)
+print(v1.marca, v1.rodas, v1.cor, v1.ano, v1.ligado, v1.velocidade, v1.combustivel, v1.tipo_combustivel)
 v1.ligar()
 v1.acelerar(50)
 v1.frear(20)
 v1.desligar()
-'''print(v2.marca, v2.rodas, v2.cor, v2.ano, v2.ligado, v2.velocidade, v2.tipo_combustivel)
+print(v2.marca, v2.rodas, v2.cor, v2.ano, v2.ligado, v2.velocidade, v2.combustivel, v2.tipo_combustivel)
 v2.ligar()
 v2.acelerar(30)
 v2.frear(10)
 v2.desligar()
-print(v3.marca, v3.rodas, v3.cor, v3.ano, v3.ligado, v3.velocidade, v3.tipo_combustivel)
+print(v3.marca, v3.rodas, v3.cor, v3.ano, v3.ligado, v3.velocidade, v3.combustivel, v3.tipo_combustivel)
 v3.ligar()
 v3.acelerar(70)
 v3.frear(30)
-v3.desligar()'''
+v3.desligar()
 
 
 '''class Veiculo():
