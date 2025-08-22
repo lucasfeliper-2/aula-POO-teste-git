@@ -5,7 +5,6 @@ Os atributos devem ser privados e acessados somente via métodos públicos gette
 class ContaBancaria:
     def __init__(self, titular, saldo, senha):
 
-        
         '''self.titular = titular          # Atributo público
         self.__saldo = saldo            # Atributo privado
         self.__senha = senha            # Atributo privado
