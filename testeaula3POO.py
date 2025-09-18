@@ -150,7 +150,7 @@ except NotaInvalidaError as e:
     # Exceções personalizadas'''
 
 
-'''class LimiteEmprestimosError(Exception):
+class LimiteEmprestimosError(Exception):
     """Erro lançado quando o usuário ultrapassa o limite de empréstimos."""
     pass
 
@@ -200,4 +200,4 @@ except LimiteEmprestimosError as e:
     print("Erro de limite:", e)
 
 except LivroIndisponivelError as e:
-    print("Erro de disponibilidade:", e)'''
+    print("Erro de disponibilidade:", e)
